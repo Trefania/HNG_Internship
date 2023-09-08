@@ -1,3 +1,1 @@
-HNG_Internship
-
-Frontend training
+HNG_Internship.github.io
