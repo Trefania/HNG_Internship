@@ -24,6 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
             setInterval(updateDayOfTheWeek, 86400000);
 
             slackUserName.textContent = "Trefania Tariro Vhareta";
-            slackDisplayImage.src = "https://ca.slack-edge.com/T05FFAA91JP-U05R92LJ44D-gd6d4d9ff738-48";
+            slackDisplayImage.src = "tref-slack.png";
             slackDisplayImage.alt = "Trefania";
         });
