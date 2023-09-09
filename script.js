@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateDayOfTheWeek() {
         const currentDate = new Date();
-        const options = { weekday: 'short', day: '2-digit', month: 'long' };
+        const options = { weekday: 'short', day: '2-digit', month: 'short' };
         const formattedDate = currentDate.toLocaleDateString('en-US', options);
-        currentDayOfTheWeek.textContent = `Current Date: ${formattedDate.toLowerCase()}`;
+        currentDayOfTheWeek.textContent = `Current Date: ${formattedDate.toUpperCase()}`;
     }
 
     updateUTCTime();
