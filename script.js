@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const month = currentDate.toLocaleString('en-US', { month: 'long' });
         const year = currentDate.getFullYear();
 
-        currentDayOfTheWeek.textContent = `Today is ${currentDay}, ${day} ${month} ${year}`;
+        currentDayOfTheWeek.textContent = `Current Date: ${currentDay}, ${day} ${month} ${year}`;
     }
 
     updateUTCTime();
