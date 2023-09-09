@@ -10,19 +10,15 @@ document.addEventListener('DOMContentLoaded', function () {
         currentUTCTime.textContent = `Current UTC Time (ms): ${currentUTCTimeMillis}`;
     }
 
+    
     function updateDayOfTheWeek() {
-        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        const currentDayIndex = new Date().getDay();
-        const currentDay = daysOfWeek[currentDayIndex];
-
         const currentDate = new Date();
-        const day = currentDate.getDate().toString().padStart(2, '0');
-        const month = currentDate.toLocaleString('en-US', { month: 'long' });
-        const year = currentDate.getFullYear();
-
-        currentDayOfTheWeek.textContent = `Current Date: ${currentDay}, ${day} ${month} ${year}`;
+        const options = { weekday: 'short', day: '2-digit', month: 'short' };
+        const formattedDate = currentDate.toLocaleDateString('en-US', options);
+        currentDayOfTheWeek.textContent = `Current Date: ${formattedDate}`;
     }
 
+   
     updateUTCTime();
     updateDayOfTheWeek();
 
