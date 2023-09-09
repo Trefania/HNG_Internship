@@ -10,15 +10,22 @@ document.addEventListener('DOMContentLoaded', function () {
         currentUTCTime.textContent = `Current UTC Time (ms): ${currentUTCTimeMillis}`;
     }
 
-    // Initial call to update UTC time
-    updateUTCTime();
+    function updateDayOfTheWeek() {
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const currentDayIndex = new Date().getDay();
+        const currentDay = daysOfWeek[currentDayIndex];
+        currentDayOfTheWeek.textContent = `Current Day: ${currentDay}`;
+    }
 
-    // Update UTC time in milliseconds every second (1000ms)
+    updateUTCTime();
+    updateDayOfTheWeek();
+
     setInterval(updateUTCTime, 1000);
 
-    // Other data
+    setInterval(updateDayOfTheWeek, 86400000); 
+
+ 
     slackUserName.textContent = "Trefania Tariro Vhareta";
     slackDisplayImage.src = "tref-slack.png";
     slackDisplayImage.alt = "Trefania";
-    currentDayOfTheWeek.textContent = `Current Day: Fri 08 September`;
 });
