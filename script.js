@@ -1,13 +1,12 @@
-new Date().toISOString();
-        document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
             const slackUserName = document.querySelector('[data-testid="slackUserName"]');
             const slackDisplayImage = document.querySelector('[data-testid="slackDisplayImage"]');
             const currentDayOfTheWeek = document.querySelector('[data-testid="currentDayOfTheWeek"]');
             const currentUTCTime = document.querySelector('[data-testid="currentUTCTime"]');
 
             function updateUTCTime() {
-                const currentUTCTimeMillis = new Date().getTime();
-                currentUTCTime.textContent = `Current UTC Time (ms): ${currentUTCTimeMillis}`;
+                const currentUTCDateString = new Date().toISOString();
+                currentUTCTime.textContent = `Current UTC Time: ${currentUTCDateString}`;
             }
             function updateDayOfTheWeek() {
                 const currentDate = new Date();
