@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
-            // Select elements by data-testid attributes
+new Date().toISOString();
+        document.addEventListener('DOMContentLoaded', function () {
             const slackUserName = document.querySelector('[data-testid="slackUserName"]');
             const slackDisplayImage = document.querySelector('[data-testid="slackDisplayImage"]');
             const currentDayOfTheWeek = document.querySelector('[data-testid="currentDayOfTheWeek"]');
